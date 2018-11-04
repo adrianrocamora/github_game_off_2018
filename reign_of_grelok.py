@@ -1,5 +1,7 @@
 import os
 
+# TODO: FSM seems like the best approach for this RPG
+
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -18,8 +20,6 @@ print("> Inventory (i)")
 print("")
 print("")
 key = input("")
-
-# TODO Use a good design pattern and add a failure check
 
 def f(x):
     return {
