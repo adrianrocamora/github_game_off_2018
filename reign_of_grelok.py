@@ -1,57 +1,16 @@
-import os
+import grelok_subroutines as gs
 
 # TODO: FSM seems like the best approach for this RPG
 
-def cls():
-    os.system('cls' if os.name == 'nt' else 'clear')
+gs.routine_010()
 
-cls()
-print("Reign of Grelok")
+key = gs.routine_100()
 
-input('')
-
-cls()
-print("> (Plains) Look Around (l)")
-print("> Go North (n)")
-print("> Go South (s)")
-print("> Go East (e)")
-print("> Go West (w)")
-print("> Inventory (i)")
-print("")
-print("")
-key = input("")
-
-def f(x):
-    return {
-        'l' : 17,      # Use base codes for each state in FSM?
-        'n' : '> Going North',
-        's' : '> Going South',
-        'e' : '> Going East',
-        'w' : '> Going West',
-        'i' : '> Checking inventory',
-    } [x]
 
 # TODO assign f(key) to a variable and remove the input output
 
-def routine_101():
-        cls()
-        print("You are standing in a wide plain. Foothills")
-        print("stretch to the north, where clouds gather")
-        print("around an ominous peak. A dirt path winds")
-        print("from a lonely chape to the east, through the")
-        print("plains where you're standing, and south ")
-        print("into a hustling town. Wispy mists gather")
-        print("over marshland in the west, where a thin")
-        print("tower stands alone in the bog.")
-        print("")
-        print("")
-        print("> You examine your surroundings...")
-        key = input("")
-        cls()
-        return key
-
-if isinstance(f(key), str):
-    print(f(key))
+if isinstance(gs.routine_100_map(key), str):
+    print(gs.routine_100_map(key))
 else:
-    if f(key) == 17:
-        key = routine_101()
+    if gs.routine_100_map(key) == 17:
+        key = gs.routine_101()
