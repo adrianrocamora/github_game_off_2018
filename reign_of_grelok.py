@@ -33,10 +33,7 @@ def f(x):
 
 # TODO assign f(key) to a variable and remove the input output
 
-if isinstance(f(key), str):
-    print(f(key))
-else:
-    if f(key) == 17:
+def routine_101():
         cls()
         print("You are standing in a wide plain. Foothills")
         print("stretch to the north, where clouds gather")
@@ -47,8 +44,14 @@ else:
         print("over marshland in the west, where a thin")
         print("tower stands alone in the bog.")
         print("")
-        # TODO Make this spacing variable to fill the "screen"
         print("")
         print("> You examine your surroundings...")
         key = input("")
         cls()
+        return key
+
+if isinstance(f(key), str):
+    print(f(key))
+else:
+    if f(key) == 17:
+        key = routine_101()
