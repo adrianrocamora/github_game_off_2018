@@ -1,6 +1,7 @@
 import grelok_subroutines as gs
 
 # TODO: FSM seems like the best approach for this RPG
+# TODO: Use JSON format for storing text and FSM
 
 gs.routine_010()
 
