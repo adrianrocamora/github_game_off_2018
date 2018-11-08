@@ -1,1 +1,2 @@
-# github_game_off_2018
+# Github_Game_Off_2018 - Reign of Grelok
+
